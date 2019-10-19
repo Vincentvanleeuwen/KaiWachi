@@ -1,0 +1,931 @@
+/*
+All content from the Home page will be displayed after
+************ Home Page ***************
+
+All content from the About page will be displayed after
+============ About Page =============
+
+All content from the Concert page will be displayed after
+############ Concerts Page ##############
+
+All content from the Merchandise page will be displayed after
+@@@@@@@@@ Merchandise Page @@@@@@@@@@@@
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,700');
+
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar*/
+::-webkit-scrollbar {
+  background-color: #383838;
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d7d7d7;
+  border-radius: 5px;
+}
+
+
+/*Small Screens*/
+@media screen and (max-width: 450px) {
+  /*==================== About Page ================= */
+
+  /*=================== End About Page================*/
+}
+
+@media screen and (max-width: 500px) {
+  /*================== About Page ==================*/
+
+  /* =========== End About Page ==================*/
+}
+
+/*Tablet & Big Phones*/
+  * {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background-color: #f1f1f1;
+  }
+
+  h1 {
+    font-size: 4em;
+    color: #383838;
+    text-align: center;
+  }
+
+  main {
+    position: relative;
+    padding: 5em 1em;
+    min-height: calc(100vh - 250px);
+  }
+
+  cite a {
+    text-decoration: none;
+    color: #1c706d;
+  }
+  /*Start Navigation*/
+  header {
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    margin: 0;
+    background-color: #383838;
+    z-index: 1;
+    box-shadow: 0 8px 6px -6px black;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+  }
+
+  .top-nav ul {
+    margin: 0;
+    padding-top: 10px;
+    padding-left: 0;
+    display: none;
+    list-style-type: none;
+    transition: 0.1s;
+
+  }
+
+  .top-nav ul li {
+    background-color: #383838;
+    height: 75px;
+    width: 100%;
+    line-height: 45px;
+    cursor: pointer;
+    color: #f1f1f1;
+    text-align: center;
+    margin: 0 auto;
+    border-top: solid #f1f1f1 1px;
+
+  }
+
+  .top-nav a {
+    padding: 1em;
+  }
+
+  .top-nav a img {
+    height: 50px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+
+  .top-nav ul li:hover {
+    background-color: #464646;
+    transition: 0.5s;
+  }
+
+  .top-nav ul li a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    color: #f1f1f1;
+    font-weight: bold;
+    padding: 1em;
+    box-sizing: border-box;
+  }
+
+  .toggle {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+    color: #f1f1f1;
+    font-size: 24px;
+  }
+
+  .active-menu {
+    display: block !important;
+    transition-duration: 2.5s;
+  }
+
+  .li-2 {
+    display: none;
+  }
+
+  .li-3 {
+    display: none;
+  }
+
+  /*End Navigation*/
+
+  /******************************** Homepage ******************************/
+  .album-list {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .album {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .album-image {
+    text-align: center;
+  }
+  .album-image img{
+    height: 200px;
+  }
+  .album-image figcaption {
+    /*display: inline;*/
+    height: 25px;
+    position: relative;
+    margin-top: 0;
+    color: white;
+    background-color: rgba(151, 53, 77, 0.5);
+    font-weight: bold;
+    font-size: 110%;
+    top: -4px;
+  }
+  .album-image figcaption:before {
+    position: absolute;
+    left: -3px;
+    top: -1px;
+    color: rgba(139, 17, 78, 0.5);
+  }
+  .album-name {
+    display: inline;
+    position: relative;
+    font-size: 2em;
+    margin: 1em 0 0 0;
+    color: rgba(151, 53, 77, 0.5);
+  }
+  /*https://line25.com/tutorials/how-to-create-a-cool-anaglyphic-text-effect-with-css*/
+  .album-name:before {
+    content: "DIE YOUNG";
+    position: absolute;
+    left: -3px;
+    top: -1px;
+    color: rgba(139, 17, 78, 0.5);
+  }
+  #cadaverous .album-name:before {
+    content: "CADAVEROUS";
+
+  }
+  #in-my-blood .album-name:before {
+    content: "IN MY BLOOD";
+
+  }
+  .all-buy-medium {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    width: 80%;
+    margin: 0 0 3em 0;
+  }
+  .all-buy-medium a {
+    text-decoration: none;
+    color: #383838;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    width: calc(80%/3);
+  }
+  .buy-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: 0;
+  }
+  .buy-icons:hover img {
+    margin-top: 0px;
+    height: 40px;
+    width: 40px;
+    transition: 0.3s;
+  }
+  .buy-icons:hover figcaption {
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  .buy-icons img{
+    margin-top: 5px;
+    height: 35px;
+    width: 35px;
+  }
+  .buy-icons figcaption {
+    margin-top: 8px;
+    font-size: 0.8em;
+  }
+
+  .soundcloud {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .soundcloud h2 {
+    font-size: 1.3em;
+    margin: 1em 0 1em 0;
+    color: rgba(151, 53, 77, 1);
+  }
+
+  #cadaverous, #in-my-blood {
+    transition: 0.5s;
+    display: none;
+  }
+
+  .slider-icon {
+    display: flex!important;
+    justify-content: center;
+  }
+  .next, .previous {
+    position: absolute;
+    top: 23%;
+
+    height: 100px;
+    width: 30px;
+    border: none;
+    outline: none;
+
+    color: white;
+    background-color: #383838;
+
+    font-weight: bold;
+
+    cursor: pointer;
+  }
+  .next:hover, .previous:hover {
+    transition: 0.5s;
+    background-color: rgba(151, 53, 77, 1);
+  }
+  .previous {
+    left: 5%;
+  }
+
+  .next {
+    right: 5%;
+  }
+
+  /*******************************End Homepage*******************************************/
+
+  /*############################ Concerts Page #########################################*/
+  .concert-main {
+    padding: 5em 0.5em 1.5em 0.5em!important;
+  }
+  .concert-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .concert-container h1 {
+    margin: 2em 0;
+
+  }
+  .all-concerts {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .concert {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 1em;
+
+    background-color: rgba(151, 53, 77, 1);
+    box-shadow: 0 8px 6px -6px black;
+
+  }
+
+  .concert-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 100%;
+    background-color: #383838;
+    padding: 10px;
+
+  }
+  .concert-date p {
+    margin: 0;
+    color: rgb(241, 241, 241);
+  }
+  .concert-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 75%;
+    padding: 0 10px;
+  }
+  .concert-tickets {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    padding: 0 10px;
+  }
+  .ticket-button {
+    padding: 1em 2em;
+    text-decoration: none;
+    background-color: white;
+    color: #383838;
+    font-weight: bold;
+    box-shadow: 0 8px 6px -6px black;
+  }
+  .ticket-button:hover {
+    background-color: #383838;
+    color: white;
+    transition: 0.5s;
+  }
+  .concert:hover .concert-info {
+    display:none;
+  }
+  .concert:hover .concert-tickets {
+    display: flex;
+  }
+
+  .concert-info p{
+    margin: 0;
+    color: rgb(241, 241, 241);
+  }
+  .concert-info p em {
+    font-size: 0.7em;
+  }
+  .wide-screen-layout {
+    width: 100%;
+  }
+  /*################################################################################*/
+
+  /*======================About Page ===============================*/
+  .about-main {
+    padding: 5rem 1rem;
+  }
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header-text {
+    font-size: 2em;
+  }
+  .about-text {
+    word-spacing: 7px;
+    line-height: 20px;
+  }
+
+  .about-media {
+    /*background-color: rgba(151, 53, 77, 1);*/
+  }
+  .about-photo img {
+    width: 100%
+  }
+  .about-photo figcaption {
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  .about-media video {
+    margin: 2em 0;
+    padding: 0 1rem;
+    width: 100%;
+
+  }
+
+  .video {
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    position: relative;
+    padding: 2em;
+  }
+
+  .video-source {
+    position: relative;
+    margin: 0 1.5em;
+    font-size: 0.7em;
+  }
+
+
+  /*==============================End About Page=====================*/
+  /*@@@@@@@@@ Merchandise Page @@@@@@@@@@@@*/
+  .merch-main {
+    padding: 5em 1em!important;
+  }
+  .merch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .merch-info {
+    text-align: center;
+  }
+  .merch-info p em {
+    font-weight: bold;
+  }
+
+  .merch-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .merch-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .merch-item {
+    width: 100%;
+    padding: 1em;
+    max-width: 350px;
+  }
+  .merch-photo {
+    border: solid 5px #383838;
+    box-shadow: 0 8px 6px -6px black;
+    border-radius: 5px 5px 0 0;
+    transition: 0.5s;
+  }
+  .merch-photo:hover {
+    border-radius: 0;
+    box-shadow: 0 15px 6px -6px rgb(55, 26, 26);
+    border: solid 5px rgba(151, 53, 77, 1);
+    transition: 0.5s;
+  }
+  .merch-photo:hover figcaption {
+    background-color: rgba(151, 53, 77, 1);
+    transition: 0.5s;
+  }
+  .merch-photo img{
+    width: 100%;
+  }
+  .merch-photo figcaption {
+    color: white;
+    background-color: #383838;
+    height: 40px;
+    text-align: center;
+    line-height: 45px;
+    font-weight: bold;
+    transition: 0.5s;
+  }
+
+  /*@@@@@@@@@ End Merchandise Page @@@@@@@@@@@@*/
+
+  /*Footer*/
+  footer {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 250px;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    background-color: #383838;
+    color: #f1f1f1;
+  }
+
+  footer ul li {
+    text-decoration: none;
+    list-style-type: none;
+    margin-bottom: 10px;
+  }
+  footer ul li img {
+    width: 15px;
+    height: 15px;
+    margin: 0 10px 0 0;
+  }
+
+.footer-headers {
+  border-bottom: solid #f1f1f1 1px;
+  text-align: center;
+}
+  .sitemap-section {
+    display: none;
+  }
+
+  .social-nav ul {
+    padding: 0;
+    margin: 25px 0;
+  }
+
+  .social-nav ul li {
+    list-style-type: none;
+  }
+
+  .social-nav ul li a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #f1f1f1;
+    vertical-align: middle;
+
+  }
+
+  .social-nav {
+    margin-top: 20px;
+  }
+  /*End Footer*/
+
+
+/*Laptop & Desktop Screens*/
+@media screen and (min-width: 768px){
+  main {
+    padding: 5em 2em;
+  }
+  /*Start Navigation*/
+  .top-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    vertical-align: center;
+    overflow: hidden;
+  }
+  .top-nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+  }
+  .top-nav ul li {
+    background-color: #383838;
+    height: 75px;
+    width: 200px;
+    line-height: 45px;
+    cursor: pointer;
+    color: #f1f1f1;
+    border-left: solid #f1f1f1 1px;
+    border-top: none;
+    text-align: center;
+    flex: 1;
+  }
+
+  .top-nav a {
+    padding: 1em;
+
+  }
+  .top-nav a img {
+    height: 50px;
+    display: inline-block;
+    margin-top: 0;
+    margin-left: 20px;
+  }
+  .top-nav ul li:first-of-type {
+    border: none;
+  }
+
+  .top-nav ul li:hover {
+    background-color: #f1f1f1;
+    box-shadow: 2px 4px 2px 3px #f1f1f1;
+    transition: 0.5s;
+  }
+
+  .top-nav ul li:hover a {
+    color: #383838;
+    transition: 0.5s;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  /*End Navigation*/
+
+  /******************************** Homepage ******************************/
+
+  .album-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+  .album-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    order: 1;
+  }
+  #cadaverous .album-container {
+    display: flex;
+    order: 0;
+  }
+  #in-my-blood .album-container {
+    display: flex;
+    order: 2;
+  }
+  #in-my-blood, #cadaverous {
+    transition: 0.5s;
+    display: block;
+  }
+  #die-young .album-image img {
+    width: 200px;
+    height: auto;
+  }
+  #cadaverous .buy-icons img, #in-my-blood .buy-icons img {
+    margin-top: 5px;
+    height: 25px;
+    width: 25px;
+  }
+  #cadaverous h1.album-name, #in-my-blood h1.album-name {
+    font-size: 2em;
+  }
+  #cadaverous .album, #in-my-blood .album {
+    margin-top: 20%;
+  }
+
+  .album {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .album-image {
+    text-align: center;
+  }
+  .album-image img{
+    /*NEw*/
+    height: 130px;
+  }
+  .album-image figcaption {
+    /*NEW*/
+    height: 35px;
+    line-height: 35px;
+  }
+  .album-image figcaption:before {
+    position: absolute;
+    left: -3px;
+    top: -1px;
+    color: rgba(139, 17, 78, 0.5);
+  }
+  .album-name {
+    display: inline;
+    position: relative;
+
+    color: rgba(151, 53, 77, 0.5);
+
+    /*NEW*/
+    font-size: 2.5em;
+    margin: 1em 0 0.5em 0;
+  }
+  .next, .previous {
+    display: none;
+
+  }
+
+
+  /*https://line25.com/tutorials/how-to-create-a-cool-anaglyphic-text-effect-with-css*/
+
+
+  .all-buy-medium {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 80%;
+
+    /*NEw*/
+    justify-content: space-between;
+    margin: 2em 0 2em 0;
+  }
+
+  .all-buy-medium a {
+    text-decoration: none;
+    color: #383838;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    width: calc(80%/3);
+  }
+  .buy-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: 0;
+  }
+  .buy-icons:hover img {
+    margin-top: 0px;
+    height: 40px;
+    width: 40px;
+    transition: 0.3s;
+  }
+  .buy-icons:hover figcaption {
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  .buy-icons img{
+    margin-top: 5px;
+    height: 35px;
+    width: 35px;
+  }
+  .buy-icons figcaption {
+    margin-top: 8px;
+    font-size: 0.8em;
+  }
+
+  .soundcloud {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .soundcloud h2 {
+
+    color: rgba(151, 53, 77, 1);
+
+    /*NEW*/
+    font-size: 2em;
+    margin: 1em 0 2em 0;
+  }
+
+  /*******************************End Homepage*******************************************/
+
+  .concert-main {
+    padding: 5em 2em!important;
+  }
+  /*==============================About Page============================*/
+
+  .about-heading {
+    display: flex;
+    justify-content: space-between;
+
+  }
+  .about-footing {
+    display: flex;
+    justify-content: space-between;
+
+  }
+  .about-media {
+    flex: 1;
+  }
+  .about-media video {
+    margin: 1em 0;
+  }
+  .about-text {
+    flex: 1;
+  }
+
+  /*=======================End About Page=======================================*/
+  /*@@@@@@@@@ Merchandise Page @@@@@@@@@@@@*/
+
+  .merch-row {
+    flex-direction: row;
+    max-width: 1000px;
+  }
+
+  /*@@@@@@@@@ End Merchandise Page @@@@@@@@@@@@*/
+
+  /*Footer Navigations*/
+  .sitemap-nav {
+    margin-top: 20px;
+  }
+  .sitemap-section {
+    display: block;
+
+  }
+  .sitemap-nav ul {
+    padding: 0;
+    margin: 25px 0;
+  }
+  .sitemap-nav ul li {
+    list-style-type: none;
+  }
+  .sitemap-nav ul li a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #f1f1f1;
+  }
+
+  .social-nav ul li {
+    list-style-type: none;
+  }
+  .social-nav ul li a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #f1f1f1;
+  }
+  /*End Footer Navigations*/
+}
+@media screen and (min-width: 850px) {
+  /************************* HOMEPAGE **************************************/
+  .album-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 7%;
+  }
+  /************************* END HOMEPAGE **************************************/
+
+  /*======================= About Page =======================================*/
+  .about-text {
+    padding: 0 5%;
+  }
+
+  /*======================= End About Page =======================================*/
+  .wide-screen-layout {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .concert {
+    width: 48%;
+  }
+}
+@media screen and (min-width: 1000px){
+  /************************* HOMEPAGE **************************************/
+  #in-my-blood, #cadaverous {
+    display: block;
+  }
+  #die-young .album-image img {
+    width: 300px!important;
+    height: auto;
+  }
+
+  #cadaverous .buy-icons img, #in-my-blood .buy-icons img {
+    margin-top: 5px;
+    height: 25px;
+    width: 25px;
+  }
+  #cadaverous h1.album-name, #in-my-blood h1.album-name {
+    font-size: 2em;
+  }
+  #cadaverous .album, #in-my-blood .album {
+    margin-top: 20%;
+  }
+  .album-image img {
+    height: 180px;
+  }
+
+  /************************* END HOMEPAGE **************************************/
+
+  /*======================= About Page =======================================*/
+  .about-text {
+    padding: 0 10%;
+  }
+
+  /*======================= End About Page =======================================*/
+
+}
+@media screen and (min-width: 1300px) {
+  /*==========================About page===========================*/
+  .about-heading, .about-footing {
+    padding-left: 15%;
+  }
+  .about-text {
+    padding: 0 15% 0 5%;
+  }
+  /*========================End About Page==========================*/
+
+
+}
+
